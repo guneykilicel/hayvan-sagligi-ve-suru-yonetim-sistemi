@@ -1,0 +1,45 @@
+@import './dark-variables';
+@import './light-variables';
+
+.dark {
+  @import './dark-variables';
+
+  @mixin dark {
+    background-color: $main-bg;
+    color: $main-color;
+    // Add other dark theme styles here
+  }
+
+  * {
+    @include dark;
+  }
+}
+
+
+
+// Dark Mode
+// // BG
+// $main-bg: #2a3447;
+// $soft-bg: #384256;
+// $dark-bg: #222b3c;
+// //TEXT
+// $main-color: white;
+// $soft-color: #ddd;
+// $dark-color: #2a3447;
+// $hover-color: #384256;
+
+
+
+// Light Mode
+// BG
+// $main-bg: #eee;
+// $soft-bg: #a0a0a0;
+// $dark-bg: #222b3c;
+// //TEXT
+// $main-color: black;
+// $soft-color: rgb(46, 46, 46);
+// $dark-color: black;
+// $hover-color: #c9c9c9;
+
+
+// $hover-color: #c4c182;

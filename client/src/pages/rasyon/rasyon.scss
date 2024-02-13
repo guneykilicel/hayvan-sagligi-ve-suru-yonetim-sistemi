@@ -1,0 +1,204 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.rasyon {
+  display: flex;
+
+  @include xl {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .view {
+    flex: 2;
+
+    .info-and-pie {
+      display: flex;
+      // align-items: center;
+      // justify-content: space-around;
+
+      .info {
+        .topInfo {
+
+          .MuiButtonBase-root{
+            color: $main-color;
+            border-color: $main-color;
+            text-transform: none;
+            padding: 2px 4px;
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+          
+
+          h1 {
+            font-weight: 700;
+            font-size: 36px;
+          }
+        }
+
+        .details {
+          font-size: 18px;
+
+          .item {
+            margin: 30px 0px;
+
+            .itemTitle {
+              font-weight: 600;
+              margin-right: 10px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+
+      .pie {
+        width: 400px;
+        height: 400px;
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+
+    hr {
+      width: 90%;
+      height: 0;
+      border: 0.5px solid gray;
+      margin: 20px 0px;
+
+      @include md {
+        display: none;
+      }
+    }
+
+    .charts {
+      margin-top: 50px;
+      border: 1px solid $main-color;
+      width: 90%;
+      border-radius: 14px;
+      padding: 20px;
+
+
+      @include md {
+        display: none;
+      }
+
+      .big-chart-content {
+        margin-bottom: 50px;
+        .chart {
+          width: 100%;
+          height: 350px;
+
+          .recharts-responsive-container{
+            .recharts-wrapper{
+              .recharts-surface{
+                margin-top: 50px;
+              }
+            }
+          }
+        }
+      }
+
+      .chart-content {
+        display: flex;
+        gap: 10px;
+
+        .chart {
+          margin-top: 50px;
+          width: 90%;
+          height: 350px;
+        }
+      }
+    }
+
+    .barChart {
+      display: flex;
+      width: 90%;
+      height: 350px;
+      margin-top: 50px;
+    }
+  }
+
+  .activities {
+    flex: 1;
+
+    .charts {
+        margin-top: 50px;
+        border: 1px solid $main-color;
+        width: 90%;
+        border-radius: 14px;
+        padding: 20px;
+  
+  
+        @include md {
+          display: none;
+        }
+
+        .chart-header {
+          margin-bottom: 40px;
+        }
+  
+        .chart-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+  
+          .chart {
+            width: 90%;
+            height: 350px;
+          }
+        }
+      }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      li {
+        list-style-type: none;
+        position: relative;
+        width: 1px;
+        padding-top: 50px;
+        background-color: #f45b69;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #f45b69;
+          transform: translateX(-50%);
+        }
+
+        div {
+          min-width: 480px;
+          padding: 15px;
+          background-color: #f45b6810;
+
+          @include md {
+            min-width: 250px;
+          }
+
+          p {
+            margin-bottom: 5px;
+          }
+
+          time {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

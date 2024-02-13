@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+
+.stepper {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .view {
+
+        .info {
+            h1 {
+                margin-bottom: 10px;
+                font-size: 24px;
+                color: $dark-color;
+            }
+
+            h2 {
+                margin-bottom: 40px;
+                font-size: 18px;
+                color: $dark-color;
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .item {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+                
+                select{
+                    color: $main-color;
+                }
+
+                @include md {
+                    width: 46%;
+                }
+
+                label {
+                    font-size: 14px;
+                }
+
+                input {
+                    color: $main-color;
+                    padding: 10px;
+                    background-color: transparent;
+                    outline: none;
+                    border: 1px solid $soft-color;
+                    border-radius: 3px;
+                }
+
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
