@@ -1,19 +1,20 @@
 @import './dark-variables';
 @import './light-variables';
 
-.dark {
-  @import './dark-variables';
+// .dark {
+//   @import './dark-variables';
 
-  @mixin dark {
-    background-color: $main-bg;
-    color: $main-color;
-    // Add other dark theme styles here
-  }
+//   @mixin dark {
+//     background-color: $main-bg;
+//     color: $main-color;
+//     // Add other dark theme styles here
+//   }
 
-  * {
-    @include dark;
-  }
-}
+//   * {
+//     @include dark;
+//     color-scheme: dark;
+//   }
+// }
 
 
 

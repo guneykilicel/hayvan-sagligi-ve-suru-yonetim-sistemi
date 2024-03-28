@@ -15,13 +15,13 @@
             h1 {
                 margin-bottom: 10px;
                 font-size: 24px;
-                color: $dark-color;
+                color: orange;
             }
 
             h2 {
                 margin-bottom: 40px;
                 font-size: 18px;
-                color: $dark-color;
+                color: orange;
             }
         }
 
@@ -40,7 +40,7 @@
                 margin-bottom: 20px;
                 
                 select{
-                    color: $main-color;
+                    color: orange;
                 }
 
                 @include md {
@@ -52,11 +52,11 @@
                 }
 
                 input {
-                    color: $main-color;
+                    color: orange;
                     padding: 10px;
                     background-color: transparent;
                     outline: none;
-                    border: 1px solid $soft-color;
+                    border: 1px solid orange;
                     border-radius: 3px;
                 }
 

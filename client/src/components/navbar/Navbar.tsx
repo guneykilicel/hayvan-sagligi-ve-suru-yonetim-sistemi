@@ -5,41 +5,32 @@ import NotificationCard from '../notificationCard/NotificationCard';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { IconButton } from '@mui/material';
+import { ThemeContext } from '../../context/ThemeContext';
 
-interface NavbarProps {
-  toggleDarkMode: () => void;
-}
 
-const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const Navbar = () => {
+
   const { user } = useContext(AuthContext);
 
-  useEffect(() => {
-    console.log(isDarkMode);
-  }, [isDarkMode]);
-
-  const toggleMode = () => {
-    toggleDarkMode();
-    setIsDarkMode(prevIsDarkMode => !prevIsDarkMode);
-  }
+  const {theme, setTheme} = useContext(ThemeContext);
 
 
   return (
-    <div className="navbar">
-      <div className="logo">
+    <div className={`navbar ${theme}`}>
+      <div className="logo background text">
         <img src="logo.png" alt="" />
         <span>Hayvan Sağlığı ve Sürü Yonetim Sistemi</span>
       </div>
-      <div className="icons">
-        <IconButton className='icon-button' aria-label="mode" size="large" onClick={toggleMode}>
-          {isDarkMode ? (
+      <div className="icons background text">
+        <IconButton className='icon-button' aria-label="mode" size="large" onClick={()=> setTheme(theme === 'light' ? 'dark' : 'light')}>
+          {theme === 'light' ? (
             <DarkModeIcon className='icon'/>
           ) : (
             <LightModeIcon className='icon' />
           )}
         </IconButton>
         <NotificationCard />
-        <div className="user">
+        <div className="user text">
           <span>{user?.farmerFullName}</span>
         </div>
       </div>

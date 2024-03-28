@@ -1,10 +1,16 @@
 @import "./variables.scss";
 @import "./responsive.scss";
+@import "./base/reset";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color-scheme: light dark;
+}
+
+html {
+  color-scheme: light dark;
 }
 
 a {
@@ -14,7 +20,6 @@ a {
 
 .main {
   font-family: "Inter", sans-serif;
-  background-color: $main-bg;
   color: $main-color;
 }
 

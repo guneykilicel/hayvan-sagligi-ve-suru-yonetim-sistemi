@@ -93,11 +93,17 @@
         display: flex;
         gap: 10px;
         margin-bottom: 30px;
+        align-items: center;
+        justify-content: space-between;
 
         .chart {
           margin-top: 50px;
           width: 90%;
           height: 350px;
+
+          .recharts-tooltip-wrapper {
+            z-index: 100;
+          }
         }
       }
     }

@@ -6,8 +6,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { loginCall } from "../../apiCalls";
 
 import "./login.scss";
-
-export const Login = () => {
+const Login = () => {
   const [farmerTC, setfarmerTC] = useState("");
   const [farmerPassword, setfarmerPassword] = useState("");
   const { isFetching, dispatch } = useContext(AuthContext);
@@ -76,3 +75,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 import "./register.scss";
 
-export const Register = () => {
+const Register = () => {
   const [farmerFullName, setFarmerFullName] = useState("");
   const [farmerTC, setfarmerTC] = useState("");
   const [farmerPhone, setFarmerPhone] = useState("");
@@ -113,3 +113,5 @@ export const Register = () => {
     </div>
   );
 };
+
+export default Register;
